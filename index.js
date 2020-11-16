@@ -12,7 +12,7 @@ const defaultUrl = 'https://api.trakt.tv';
 const redirectUrn = 'urn:ietf:wg:oauth:2.0:oob';
 const defaultUa = `${pkg.name}/${pkg.version} (NodeJS; +${pkg.repository.url})`;
 
-module.exports = class Trakt {
+module.exports.default = class Trakt {
     constructor(settings = {}, debug) {
         if (!settings.client_id) throw Error('Missing client_id');
 
